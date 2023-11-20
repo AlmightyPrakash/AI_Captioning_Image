@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="reset_ui">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>500</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QPushButton{
+color: white;
+background: rgba(255, 255, 255, 30);
+border-radius: 6px;
+padding-left: 5px;
+}
+
+QPushButton::hover{
+	color: white;
+	background-color : rgba(0, 0  ,0 ,100);
+
+}
+
+QPushButton::pressed{
+	background-color: rgba(0, 0, 0, 120)
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignRight|Qt::AlignTop">
+      <widget class="QPushButton" name="close_ui">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QPushButton{
+color: white;
+background: rgba(255, 255, 255, 30);
+border-radius: 6px;
+padding-left: 5px;
+}
+
+QPushButton::hover{
+	color: white;
+	background-color : rgba(0, 0  ,0 ,100);
+
+}
+
+QPushButton::pressed{
+	background-color: rgba(0, 0, 0, 120)
+}
+</string>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QFrame" name="frame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QListView::item{
+              			color: white;
+                        background: transparent;
+                        background-color: rgba(255, 255, 255, 20);
+                        border-radius: 8;
+                        padding-left: 15px;
+                        }
+QListWidget QScrollBar
+                        {
+                        background : transparent;
+                        }
+ QListView::item:selected
+                        {
+                        border : 0px;
+                        color: white;
+                        background : rgba(255, 255, 255, 60);
+                        }
+                        QListView::item:hover
+                        {
+                        border : 0px;
+                        background : rgba(255, 255, 255, 60);
+                        }
+ QScrollBar:horizontal {
+                border: none;
+                background: rgb(52, 59, 72);
+                height: 8px;
+                margin: 0px 21px 0 21px;
+                border-radius: 0px;
+            }
+ QScrollBar::handle:horizontal {
+                background: rgba(255, 255, 255, 30);
+                min-width: 25px;
+                border-radius: 4px
+            }
+QScrollBar::add-line:horizontal {
+                border: none;
+                background:rgba(255, 255, 255, 30);
+                width: 20px;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                subcontrol-position: right;
+                subcontrol-origin: margin;
+            }
+QScrollBar::sub-line:horizontal {
+                border: none;
+                background: rgb(55, 63, 77);
+                width: 20px;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                subcontrol-position: left;
+                subcontrol-origin: margin;
+            }
+ QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+            {
+                 background: none;
+            }
+ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+            {
+                 background: none;
+            }
+ QScrollBar:vertical {
+                border: none;
+                background: rgba(255, 255, 255, 10);
+                width: 8px;
+                margin: 21px 0 21px 0;
+                border-radius: 0px;
+             }
+ QScrollBar::handle:vertical {  
+                background: rgba(255, 255, 255, 50);
+                min-height: 25px;
+                border-radius: 4px
+             }
+
+QScrollBar::sub-line:vertical {
+                border: none;
+                background: rgba(0, 0, 0, 10);
+                 height: 20px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                 subcontrol-position: top;
+                 subcontrol-origin: margin;
+             }
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+                 background: none;
+             }
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                 background: none;
+             }
+                        </string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="1">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="1">
+         <widget class="QFrame" name="image">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QFrame" name="frame_3">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QFrame" name="frame_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="drop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Segoe UI</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Drag &amp; Drop File Here</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="status">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>36</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: transparent;
+color: white;</string>
+          </property>
+          <property name="text">
+           <string>AI Image Caption</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" alignment="Qt::AlignHCenter">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Authors: Prakash Sharma , Daksh Chauhan,Karandeep Kambok ,Prashant Kumar </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
